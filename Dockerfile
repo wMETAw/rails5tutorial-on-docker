@@ -16,3 +16,5 @@ ADD Gemfile.lock /myapp/Gemfile.lock
 # gemfileのinstall
 RUN bundle install
 ADD . /myapp
+
+#RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime

@@ -1,8 +1,8 @@
 rails5tuto-db:
-  image: mysql:5.7
+  build: ./mysql
   environment:
+    TZ: Asia/Tokyo
     MYSQL_ROOT_PASSWORD: root
-
 rails5tuto-web:
   build: .
   command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -12,3 +12,6 @@ rails5tuto-web:
     - "3000:3000"
   links:
     - rails5tuto-db
+  environment:
+    LANG: ja_JP.UTF-8
+    TZ: Asia/Tokyo
