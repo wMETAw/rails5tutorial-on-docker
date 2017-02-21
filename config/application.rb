@@ -14,6 +14,9 @@ module Myapp
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
 
